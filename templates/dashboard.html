@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<div class="dashboard">
+
+    <h1>Student Portal Dashboard</h1>
+
+    <p>Welcome to the Student Management Portal.</p>
+
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h2>{{ total_students }}</h2>
+            <p>Total Students</p>
+            <a href="/students/">View Students</a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>{{ total_courses }}</h2>
+            <p>Total Courses</p>
+            <a href="/courses/">View Courses</a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>{{ total_results }}</h2>
+            <p>Total Results</p>
+            <a href="/results/">View Results</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

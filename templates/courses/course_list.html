@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="page-header">
+        <div>
+            <h1>Courses</h1>
+            <p>List of courses offered by the institution.</p>
+        </div>
+
+        <a href="/admin/courses/course/add/" class="btn">
+            + Add Course
+        </a>
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Course Title</th>
+                    <th>Credits</th>
+                    <th>Programme</th>
+                    <th>Level</th>
+                    <th>Semester</th>
+                    <th>Lecturer</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for course in courses %}
+
+                <tr>
+
+                    <td>
+                        <strong>{{ course.code }}</strong>
+                    </td>
+
+                    <td>
+                        {{ course.title }}
+                    </td>
+
+                    <td>
+                        {{ course.credits }}
+                    </td>
+
+                    <td>
+                        {{ course.programme }}
+                    </td>
+
+                    <td>
+                        {{ course.level }}
+                    </td>
+
+                    <td>
+                        {{ course.semester }}
+                    </td>
+
+                    <td>
+                        {{ course.lecturer|default:"Not assigned" }}
+                    </td>
+
+                </tr>
+
+                {% empty %}
+
+                <tr>
+                    <td colspan="7" class="empty">
+                        No courses have been registered.
+                    </td>
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

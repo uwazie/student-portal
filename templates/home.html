@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <h1>
+            Student Management Portal
+        </h1>
+
+        <p>
+            Manage students, courses and academic results
+            from one centralized system.
+        </p>
+
+        <a href="/dashboard/" class="btn">
+            Open Dashboard
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <h2>Portal Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Student Management</h3>
+
+            <p>
+                Register and manage student information.
+            </p>
+
+            <a href="/students/">
+                Manage Students
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Courses</h3>
+
+            <p>
+                Manage courses, programmes and credits.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Results</h3>
+
+            <p>
+                Record and view students' academic results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
